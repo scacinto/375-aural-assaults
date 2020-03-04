@@ -15,15 +15,18 @@ For some more of my projects, code, and music, please see my website scottericpe
 */
 
 // ignore this bit - it's just for recording options when I'm exporting to the web
+(
+s.waitForBoot {
 s = Server.local;
 s.options.sampleRate = 48000;
 s.options.memSize = 4096 * 100;
-s.recHeaderFormat = "aiff";
+s.recHeaderFormat = "wav";
 s.recSampleFormat = "int24";
 s.recChannels = 2;
 s.reboot;
 s.makeGui;
-
+}
+)
 
 /*_____________________________________________________
 

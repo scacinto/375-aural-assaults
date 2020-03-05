@@ -7,6 +7,4 @@ Many of the pieces employ variable delay lines with common modulation parameters
 
 # What's here?
 
-The SuperCollider code for generating all of the sound files on 375auralassaults.com can be found in the file __375AAP.scd__.
-
-Spectrogram images of the tracks can be found in the __images__ folder.
+The mp3 sound files from 375auralassaults.com are in the __sound files__ folder. The SuperCollider code for generating all of the sound files can be found in the file __375AAP.scd__. Spectrogram images of the tracks can be found in the __images__ folder.

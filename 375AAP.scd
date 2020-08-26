@@ -33,6 +33,25 @@ s.makeGui;
 LET THE ASSAULTS BEGIN!
 _______________________________________________________*/
 
+/*ASSAULT #44 : please adjust your radio dial
+
+Instructions for use. 1. Turn your computer volume all the way down. 2. Put on headphones. 3. Carefully raise the volume. 4. Enjoy at a comfortable listening level.
+
+Do not: turn volume all the way up, use headphones, experience bloody headphones.
+*/
+
+(
+{
+	var gate = LFNoise1.kr(25, 0.1, 0).poll;
+	var noiz = PinkNoise.ar() * Env.asr(0.01, 1,releaseTime:0.01).kr(gate: gate);
+	var filt = Splay.arFill(14, {
+		[RLPF.ar(noiz, Demand.kr(gate, 0, Drand(Array.fill(12, {rrand(50, 1500)}),inf)),rrand(0.01,0.5)),
+			RHPF.ar(noiz, Demand.kr(gate, 0, Drand(Array.fill(12, {rrand(3500, 5500)}),inf)),rrand(0.0075,0.075))].choose;
+	}, level: 1/14, levelComp: false);
+	Normalizer.ar( filt );
+}.play
+)
+
 
 //ASSAULT #43 : tender dark_train, sing me your sweet song
 
